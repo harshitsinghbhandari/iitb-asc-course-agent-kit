@@ -5,6 +5,8 @@ IITB internal network access and ASC login are required. VPN is only needed when
 
 Do not store credentials in this skill. Use the user's approved local auth source or ask the user to log in when the session is not already authenticated.
 
+This is unofficial student-built guidance for legitimate personal course-planning use. Do not use it to bypass ASC authentication, authorization, or IIT Bombay network policy.
+
 ---
 
 ## Connection

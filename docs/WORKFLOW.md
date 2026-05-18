@@ -2,6 +2,8 @@
 
 Use this when a student asks for course recommendations.
 
+This workflow is unofficial and for personal educational/course-planning assistance only. Official ASC data, institute rules, department guidance, faculty-advisor approval, and registration decisions are authoritative.
+
 ## Inputs
 
 Collect:

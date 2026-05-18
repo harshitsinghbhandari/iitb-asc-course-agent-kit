@@ -4,6 +4,14 @@ This repo teaches an AI agent how to help IIT Bombay students research ASC cours
 
 You are operating against an authenticated IITB system. Be careful with credentials, cookies, screenshots, exported HTML, and downloaded grade statistics.
 
+## Status And Scope
+
+This is an unofficial student-built project. It is not affiliated with, endorsed by, maintained by, or approved by IIT Bombay, ASC, or any IIT Bombay academic/administrative office.
+
+Use it only for personal educational and course-planning assistance. Official ASC records, institute rules, department guidance, faculty-advisor approval, and registration decisions remain authoritative.
+
+Do not use this repo to bypass authentication, access controls, authorization checks, institute policy, or network policy. If ASC denies access, stop and use the proper official login/network path.
+
 ## Prime Directive
 
 Help the student answer course-planning questions using ASC evidence:

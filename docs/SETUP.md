@@ -2,6 +2,8 @@
 
 This document is for a student or an AI agent preparing a local machine to research IITB ASC courses.
 
+This is unofficial setup guidance for personal educational/course-planning use. Follow IIT Bombay network, ASC, and authentication policies.
+
 ## Requirements
 
 - IITB network access: campus network or IITB VPN.

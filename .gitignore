@@ -31,3 +31,6 @@ auth
 .DS_Store
 .idea/
 .vscode/
+
+# Local notes and drafts
+notes/

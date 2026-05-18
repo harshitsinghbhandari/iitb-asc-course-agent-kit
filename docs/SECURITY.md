@@ -2,6 +2,12 @@
 
 This repo is designed to keep secrets and private ASC data out of Git.
 
+## Unofficial Educational Project
+
+This project is unofficial and student-built. It is not affiliated with, endorsed by, maintained by, or approved by IIT Bombay, ASC, or any IIT Bombay academic/administrative office.
+
+Use it only for personal educational and course-planning assistance. Do not use it to bypass authentication, access controls, authorization checks, institute policy, or network policy.
+
 ## Never Commit
 
 - IITB LDAP/VPN passwords.

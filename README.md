@@ -2,6 +2,14 @@
 
 Reusable notes, scripts, and browser-harness domain skills for helping an AI assistant research IIT Bombay ASC course information: running courses, restrictions, course details, and historical grading stats.
 
+## Disclaimer
+
+This is an unofficial student-built project. It is not affiliated with, endorsed by, maintained by, or approved by IIT Bombay, ASC, or any IIT Bombay academic/administrative office.
+
+Use it only for personal educational and course-planning assistance. It does not replace official ASC records, institute rules, department guidance, faculty-advisor approval, or registration decisions made through official IIT Bombay systems.
+
+Users are responsible for complying with IIT Bombay policies, ASC terms/notices, network access rules, and privacy expectations. Do not use this project to bypass authentication, access controls, or authorization checks.
+
 This repo is meant for a student to hand to an AI agent with a prompt like:
 
 ```text
@@ -146,3 +154,7 @@ For example, Autumn 2026-27 is `year=2026&semester=1`.
 ## Repository Status
 
 This repo is a practical field guide. It is not an official IIT Bombay resource, and the ASC pages can change. When a flow breaks, update the relevant file in `domain-skills/asc.iitb.ac.in/` with the new working path.
+
+## License
+
+Code and documentation in this repository are released under the MIT License. See `LICENSE`.
