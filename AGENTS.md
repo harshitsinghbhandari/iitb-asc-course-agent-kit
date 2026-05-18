@@ -80,15 +80,37 @@ scripts/openvpn-iitb.sh
 
 For unattended startup on macOS, `scripts/install-openvpn-iitb-launchdaemon.sh` installs a LaunchDaemon. Use it only if the user understands it will create a root-owned system service.
 
+For Debian/Ubuntu Linux:
+
+```bash
+sudo apt update
+sudo apt install -y openvpn python3-venv python3-pip
+scripts/setup-openvpn-iitb-cli.sh /path/to/IITBVPN.ovpn
+$EDITOR ~/.config/openvpn/iitb.auth
+scripts/openvpn-iitb.sh
+```
+
+On Linux, do not use the LaunchDaemon script. If the user wants unattended startup, use NetworkManager/OpenVPN or a systemd service appropriate for their distro.
+
 ## Browser Setup Notes
 
-Preferred reliable browser setup:
+Preferred reliable browser setup on macOS:
 
 ```bash
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
   --remote-debugging-port=9333 \
   --user-data-dir="$HOME/chrome-debug-asc"
 ```
+
+Preferred reliable browser setup on Linux:
+
+```bash
+google-chrome \
+  --remote-debugging-port=9333 \
+  --user-data-dir="$HOME/chrome-debug-asc"
+```
+
+If `google-chrome` is not installed, try `chromium` or `chromium-browser` with the same flags.
 
 Then run:
 

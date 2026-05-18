@@ -54,6 +54,16 @@ $EDITOR ~/.config/openvpn/iitb.auth
 scripts/openvpn-iitb.sh
 ```
 
+For Debian/Ubuntu Linux:
+
+```bash
+sudo apt update
+sudo apt install -y openvpn python3-venv python3-pip chromium-browser
+scripts/setup-openvpn-iitb-cli.sh ~/Downloads/IITBVPN.ovpn
+$EDITOR ~/.config/openvpn/iitb.auth
+scripts/openvpn-iitb.sh
+```
+
 For browser-harness:
 
 ```bash
@@ -67,7 +77,17 @@ pip install -e ./browser-harness
 Then launch Chrome with a non-default debugging profile:
 
 ```bash
+# macOS
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
+  --remote-debugging-port=9333 \
+  --user-data-dir="$HOME/chrome-debug-asc"
+
+# Linux, depending on distro/package
+google-chrome \
+  --remote-debugging-port=9333 \
+  --user-data-dir="$HOME/chrome-debug-asc"
+
+chromium \
   --remote-debugging-port=9333 \
   --user-data-dir="$HOME/chrome-debug-asc"
 ```

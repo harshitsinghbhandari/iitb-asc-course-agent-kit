@@ -20,10 +20,25 @@ pip install -r requirements.txt
 
 ## OpenVPN
 
-Install OpenVPN:
+Install OpenVPN on macOS:
 
 ```bash
 brew install openvpn
+```
+
+Install OpenVPN on Debian/Ubuntu Linux:
+
+```bash
+sudo apt update
+sudo apt install -y openvpn
+```
+
+If your distro packages Chromium separately, also install one browser:
+
+```bash
+sudo apt install -y chromium-browser
+# or:
+sudo apt install -y chromium
 ```
 
 Create a runtime config from the IITB `.ovpn` profile:
@@ -57,6 +72,16 @@ Connect:
 scripts/openvpn-iitb.sh
 ```
 
+That command uses `sudo openvpn --config ~/.config/openvpn/iitb-cli.ovpn`, so it works on both macOS and Linux if `openvpn` is on `PATH`.
+
+The LaunchDaemon helper is macOS-only:
+
+```bash
+scripts/install-openvpn-iitb-launchdaemon.sh
+```
+
+On Linux, prefer your distro's NetworkManager/OpenVPN integration or a systemd unit if you need unattended startup.
+
 ## browser-harness
 
 Clone browser-harness in this repo or elsewhere:
@@ -76,10 +101,32 @@ ln -s ../../../domain-skills/asc.iitb.ac.in \
 
 ## Chrome Remote Debugging
 
-Reliable isolated profile:
+Reliable isolated profile on macOS:
 
 ```bash
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome \
+  --remote-debugging-port=9333 \
+  --user-data-dir="$HOME/chrome-debug-asc"
+```
+
+Reliable isolated profile on Linux:
+
+```bash
+google-chrome \
+  --remote-debugging-port=9333 \
+  --user-data-dir="$HOME/chrome-debug-asc"
+```
+
+If the binary is named `chromium` or `chromium-browser`:
+
+```bash
+chromium \
+  --remote-debugging-port=9333 \
+  --user-data-dir="$HOME/chrome-debug-asc"
+```
+
+```bash
+chromium-browser \
   --remote-debugging-port=9333 \
   --user-data-dir="$HOME/chrome-debug-asc"
 ```
