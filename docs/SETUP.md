@@ -4,7 +4,7 @@ This document is for a student or an AI agent preparing a local machine to resea
 
 ## Requirements
 
-- IITB VPN access.
+- IITB network access: campus network or IITB VPN.
 - An IITB ASC account.
 - Python 3.11+.
 - Chrome or Chromium.
@@ -17,6 +17,18 @@ python -m venv .venv
 . .venv/bin/activate
 pip install -r requirements.txt
 ```
+
+## Network Access
+
+ASC is available from IITB internal networks. If the user is on IITB-Wireless, eduroam on campus, or internal LAN, VPN may not be required.
+
+Test first:
+
+```bash
+curl -I --max-time 10 https://asc.iitb.ac.in/acadmenu/
+```
+
+If this succeeds, skip OpenVPN and continue to browser-harness setup. If it fails or times out, use VPN.
 
 ## OpenVPN
 

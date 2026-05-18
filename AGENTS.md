@@ -46,7 +46,7 @@ For IITB ASC terms:
 
 ## Setup Checklist
 
-1. Confirm VPN is connected or help the user set it up.
+1. Check whether ASC is reachable directly. If the user is on IITB-Wireless, eduroam, or internal LAN, VPN may not be required.
 2. Confirm Chrome remote debugging is available.
 3. Confirm browser-harness can attach to Chrome.
 4. Open `https://asc.iitb.ac.in/acadmenu/`.
@@ -67,7 +67,17 @@ VPN_OR_ASC_PASSWORD
 
 This file must be mode `600`.
 
-## VPN Setup Notes
+## Network And VPN Notes
+
+ASC is reachable from IITB internal networks such as IITB-Wireless, eduroam on campus, and internal LAN. In that case, do not require VPN; proceed directly to browser setup and ASC login.
+
+Before asking the user to configure VPN, test reachability:
+
+```bash
+curl -I --max-time 10 https://asc.iitb.ac.in/acadmenu/
+```
+
+If this fails or times out, ask the user to connect to IITB VPN or move to an IITB internal network.
 
 For macOS, the included scripts support OpenVPN CLI:
 

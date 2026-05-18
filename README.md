@@ -11,7 +11,7 @@ Find good Autumn electives I am eligible for, especially AI/ML and HSS courses.
 
 The agent should then know how to:
 
-- Ask the user to set up IITB VPN access.
+- Check whether ASC is already reachable from the IITB campus network, and ask for VPN setup only when needed.
 - Connect to ASC through a browser session.
 - Avoid ASC's `Attempt Logged! Invalid Access` traps.
 - Fetch running courses and hidden restriction rows.
@@ -40,12 +40,20 @@ Do not commit:
 
 ## Quick Start For A Student
 
-1. Install OpenVPN and connect to IITB VPN.
+1. Confirm ASC is reachable. If you are on IITB-Wireless, eduroam, or internal LAN, VPN may not be needed.
 2. Install browser-harness or let your AI agent install it.
 3. Launch Chrome with remote debugging or enable remote debugging for your active profile.
 4. Ask your AI agent to read `AGENTS.md`.
 
-For macOS with an IITB OpenVPN profile:
+Quick reachability check:
+
+```bash
+curl -I --max-time 10 https://asc.iitb.ac.in/acadmenu/
+```
+
+If this cannot connect from your current network, use the VPN setup below.
+
+For macOS with an IITB OpenVPN profile, when off the IITB network:
 
 ```bash
 brew install openvpn
@@ -54,7 +62,7 @@ $EDITOR ~/.config/openvpn/iitb.auth
 scripts/openvpn-iitb.sh
 ```
 
-For Debian/Ubuntu Linux:
+For Debian/Ubuntu Linux, when off the IITB network:
 
 ```bash
 sudo apt update

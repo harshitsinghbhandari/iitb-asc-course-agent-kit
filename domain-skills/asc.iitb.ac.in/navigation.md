@@ -1,7 +1,7 @@
 # ASC IIT Bombay — Navigation, Auth, and Frames
 
 Field-tested against `asc.iitb.ac.in` on 2026-05-18 using browser-harness + a local Chrome CDP session.
-VPN and ASC login are required.
+IITB internal network access and ASC login are required. VPN is only needed when the user is outside IITB internal networks.
 
 Do not store credentials in this skill. Use the user's approved local auth source or ask the user to log in when the session is not already authenticated.
 
@@ -9,7 +9,15 @@ Do not store credentials in this skill. Use the user's approved local auth sourc
 
 ## Connection
 
-ASC is only reachable on IITB VPN. In this workspace, Chrome was connected through a DevTools endpoint:
+ASC is reachable from IITB internal networks such as IITB-Wireless, eduroam on campus, and internal LAN. If off-network, connect to IITB VPN first.
+
+Quick reachability check:
+
+```bash
+curl -I --max-time 10 https://asc.iitb.ac.in/acadmenu/
+```
+
+In this workspace, Chrome was connected through a DevTools endpoint:
 
 ```bash
 BU_CDP_URL=http://127.0.0.1:9333 browser-harness <<'PY'

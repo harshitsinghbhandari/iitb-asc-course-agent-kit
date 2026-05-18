@@ -23,7 +23,7 @@ I am a 2024 B.Tech IEOR student. Find Autumn 2026-27 STEM/Flexible electives wit
 
 1. Read `AGENTS.md`.
 2. Read all files under `domain-skills/asc.iitb.ac.in/`.
-3. Connect to VPN and ASC.
+3. Confirm ASC is reachable directly or through IITB VPN, then log in.
 4. Fetch target-term running courses.
 5. Parse restrictions.
 6. Filter eligible courses.
