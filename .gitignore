@@ -1,0 +1,33 @@
+# Python / local environments
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Local Chrome profiles and browser state
+.chrome-*/
+chrome-debug-*/
+
+# Local browser-harness checkout, if cloned inside this repo
+browser-harness/
+
+# ASC outputs and screenshots. These may contain private IITB data.
+artifacts/
+*.png
+*.html
+*.csv
+*.partial.json
+
+# Secrets and local runtime config
+.env
+.env.*
+auth
+*.auth
+*.ovpn
+*.key
+*.crt
+
+# OS/editor noise
+.DS_Store
+.idea/
+.vscode/
