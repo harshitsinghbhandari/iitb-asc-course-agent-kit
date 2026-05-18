@@ -71,13 +71,17 @@ This file must be mode `600`.
 
 ASC is reachable from IITB internal networks such as IITB-Wireless, eduroam on campus, and internal LAN. In that case, do not require VPN; proceed directly to browser setup and ASC login.
 
-Before asking the user to configure VPN, test reachability:
+Before asking the user to configure VPN, test whether ASC is actually ready, not merely TCP-reachable:
 
 ```bash
-curl -I --max-time 10 https://asc.iitb.ac.in/acadmenu/
+curl -IL --max-time 15 https://asc.iitb.ac.in/acadmenu/
 ```
 
-If this fails or times out, ask the user to connect to IITB VPN or move to an IITB internal network.
+Interpretation:
+
+- Final URL remains on `asc.iitb.ac.in`: proceed to browser setup and ASC login.
+- Request fails or times out: ask the user to connect to IITB VPN or move to an IITB internal network.
+- Response redirects to `landing.iitb.ac.in`: the machine can reach IITB but is behind the IITB landing/SSO gate. Ask the user to complete that gate in the browser or use VPN.
 
 For macOS, the included scripts support OpenVPN CLI:
 

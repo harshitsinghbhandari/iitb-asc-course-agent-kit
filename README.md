@@ -45,13 +45,13 @@ Do not commit:
 3. Launch Chrome with remote debugging or enable remote debugging for your active profile.
 4. Ask your AI agent to read `AGENTS.md`.
 
-Quick reachability check:
+Quick ASC-ready check:
 
 ```bash
-curl -I --max-time 10 https://asc.iitb.ac.in/acadmenu/
+curl -IL --max-time 15 https://asc.iitb.ac.in/acadmenu/
 ```
 
-If this cannot connect from your current network, use the VPN setup below.
+If this cannot connect, use the VPN setup below. If it redirects to `https://landing.iitb.ac.in/...`, your network can reach IITB but has not granted direct internal access to ASC yet; complete the IITB landing/SSO flow or use VPN.
 
 For macOS with an IITB OpenVPN profile, when off the IITB network:
 

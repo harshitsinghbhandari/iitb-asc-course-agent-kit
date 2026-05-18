@@ -14,8 +14,10 @@ ASC is reachable from IITB internal networks such as IITB-Wireless, eduroam on c
 Quick reachability check:
 
 ```bash
-curl -I --max-time 10 https://asc.iitb.ac.in/acadmenu/
+curl -IL --max-time 15 https://asc.iitb.ac.in/acadmenu/
 ```
+
+If the final URL is `landing.iitb.ac.in`, ASC itself is not ready for automation yet. Complete the IITB landing/SSO gate in the browser or use VPN.
 
 In this workspace, Chrome was connected through a DevTools endpoint:
 

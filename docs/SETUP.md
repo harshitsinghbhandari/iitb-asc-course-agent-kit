@@ -25,10 +25,14 @@ ASC is available from IITB internal networks. If the user is on IITB-Wireless, e
 Test first:
 
 ```bash
-curl -I --max-time 10 https://asc.iitb.ac.in/acadmenu/
+curl -IL --max-time 15 https://asc.iitb.ac.in/acadmenu/
 ```
 
-If this succeeds, skip OpenVPN and continue to browser-harness setup. If it fails or times out, use VPN.
+If the final response stays on `asc.iitb.ac.in`, skip OpenVPN and continue to browser-harness setup.
+
+If it fails or times out, use VPN.
+
+If it redirects to `landing.iitb.ac.in`, complete the IITB landing/SSO gate in a browser or use VPN. A successful TCP connection or HTTP `200` from the landing page is not enough for ASC automation.
 
 ## OpenVPN
 
